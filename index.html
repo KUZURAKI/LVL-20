@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../static/styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="containerNav">
+        <div class="containerLogo">
+          <img src="../static/img/eye.png" alt="Лого" />
+        </div>
+        <button class="openModalBtn">Регистрация</button>
+      </div>
+    </header>
+    <hr />
+
+    <section class="info">
+      <h1>Проверка</h1>
+      <p>
+        Пройдите регистрацию <span>*</span>, чтобы вы смогли пользоваться сайтом
+      </p>
+    </section>
+
+    <dialog id="registrationModal" class="modal">
+      <div class="modalContent">
+        <button class="closeBtn">&times;</button>
+        <form method="POST" action="/">
+          <div class="formInfo">
+            <div class="container">
+              <div class="formGroup">
+                <fieldset>
+                  <legend>Логин <span>*</span></legend>
+                  <input
+                    type="text"
+                    id="login"
+                    name="login"
+                    required
+                    placeholder="К примеру: ivan"
+                  />
+                </fieldset>
+              </div>
+
+              <div class="formGroup passwordField">
+                <fieldset>
+                  <legend>Пароль <span>*</span></legend>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    placeholder="К примеру: 123"
+                  />
+                  <span class="togglePassword"
+                    ><img src="../static/img/eye.png" alt="Toggle"
+                  /></span>
+                </fieldset>
+              </div>
+
+              <div class="formGroup passwordField">
+                <fieldset>
+                  <legend>Подтвердите пароль <span>*</span></legend>
+                  <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    required
+                    placeholder="Повторите пароль"
+                  />
+                  <span class="togglePassword"
+                    ><img src="../static/img/eye.png" alt="Toggle"
+                  /></span>
+                </fieldset>
+              </div>
+
+              <div class="formGroup">
+                <fieldset>
+                  <legend>Ф.И.О. <span>*</span></legend>
+                  <input
+                    type="text"
+                    id="full_name"
+                    name="full_name"
+                    required
+                    placeholder="К примеру: Иванович Иван Иванов"
+                  />
+                </fieldset>
+              </div>
+
+              <div class="formGroup">
+                <fieldset>
+                  <legend>E-Mail <span>*</span></legend>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="К примеру: ivan@gmail.com"
+                  />
+                </fieldset>
+              </div>
+
+              <div class="formGroup">
+                <fieldset>
+                  <legend>Телефон <span>*</span></legend>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="К примеру: +7 (***) ***-**-**"
+                  />
+                </fieldset>
+              </div>
+
+              <div class="formGroup">
+                <fieldset>
+                  <legend>О себе <span>*</span></legend>
+                  <textarea
+                    id="about"
+                    name="about"
+                    required
+                    placeholder="К примеру: Я занимаюсь спортом"
+                  ></textarea>
+                </fieldset>
+              </div>
+
+              <div class="formGroup">
+                <fieldset>
+                  <legend>Аватар <span>*</span></legend>
+                  <input
+                    type="file"
+                    id="avatar"
+                    name="avatar"
+                    placeholder="URL аватара"
+                    accept="image/jpeg,image/png,image/gif"
+                    required
+                  />
+                </fieldset>
+              </div>
+
+              <button type="submit" id="submitButton">Отправить</button>
+              <div class="formGroup">
+                <p>Поля обязательные <span>*</span> для заполнения</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <script src="../static/js/index.js"></script>
+  </body>
+</html>
